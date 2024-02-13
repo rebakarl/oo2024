@@ -20,7 +20,7 @@ public class Main {
         maailm.prindiKaart(maailm, mangija, draakon, ork);
         String sisend = scanner.nextLine();
 
-        mangija.liigu(sisend);
+        mangija.liigu(sisend,maailm);
         maailm.prindiKaart(maailm, mangija, draakon, ork);
 
 
@@ -29,7 +29,7 @@ public class Main {
         while (!sisend.equals("end")) { // .equals --> ==    !m.equals() --> !=
             maailm.prindiKaart(maailm, mangija, draakon, ork);
             sisend = scanner.nextLine();
-            mangija.liigu(sisend);
+            mangija.liigu(sisend,maailm);
         }
 
     } // main (args[])

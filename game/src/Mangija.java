@@ -13,19 +13,27 @@ public class Mangija {
         suund= Suund.YLES;
     }
 
-    public void liigu(String sisend) {
+    public void liigu(String sisend, Maailm maailm) {
         switch (sisend) {
             case "w" -> suund = Suund.YLES;
-            case "s" -> suund= Suund.ALLA;
-            case "a" -> suund= Suund.VASAKULE;
-            case "d" -> suund= Suund.PAREMALE;
+            case "s" -> suund = Suund.ALLA;
+            case "a" -> suund = Suund.VASAKULE;
+            case "d" -> suund = Suund.PAREMALE;
         } // switch() kinniminek
         switch (suund) {
-            case YLES -> yCoord--;
-            case ALLA -> yCoord++;
-            case VASAKULE -> xCoord--;
-            case PAREMALE -> xCoord++;
-        } // switch() kinniminek
+            case YLES -> {
+                if (yCoord > 1) yCoord--;
+            }
+            case ALLA -> {
+                if (yCoord < maailm.kaardiKorgus - 1) yCoord++;
+            }
+            case VASAKULE -> {
+                if (xCoord > 1) xCoord--;
+            }
+            case PAREMALE -> {
+                if (yCoord < maailm.kaardiLaius - 1) xCoord++;
+            }
+        }
     } // liigu() kinniminek
 
     private int saaKoordinaat(Random random, int kaart) {
