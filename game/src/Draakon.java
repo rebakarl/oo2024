@@ -1,9 +1,6 @@
 import java.util.Random;
 
-public class Draakon {
-    int xCoord;
-    int yCoord;
-    char symbol;
+public class Draakon extends Tegelane implements JuhuslikKoordinaat{
 
 
     public Draakon(Random random, Maailm maailm) {
@@ -12,7 +9,7 @@ public class Draakon {
         symbol = 'd';
     }
 
-    private int saaKoordinaat(Random random, int kaart) {
+    public int saaKoordinaat(Random random, int kaart) {
         return random.nextInt(1, kaart - 1);
     }
 
