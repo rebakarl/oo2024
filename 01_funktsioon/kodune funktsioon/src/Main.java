@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Sinu päevane kalorivajadus on: "+kalor2+" kalorit.");
 
     }
-    public static double getCalories(double kaal, double pikkus, int vanus, char sugu, double aktiivsusaste) {
+    public static double getCalories(int kaal, double pikkus, int vanus, char sugu, double aktiivsusaste) {
         double kalorid;
 
         if (sugu == 'M' || sugu == 'm') {
