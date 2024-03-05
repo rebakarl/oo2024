@@ -8,7 +8,7 @@
 //  Loo "main funktsioonis" toit (nt. kartulisalat), küsi salatis leiduvate toitainete kogused. - ok
 
 //  * Võimalda toidu andmeid kirjutada tekstifaili(desse) ja lugeda tagasi. +
-//  Võib eeldada, et toiduaine, toidukomponendi ning toidu nimetus on unikaalne, et ei tekiks failide juures üle kirjutamist.
+//  Võib eeldada, et toiduaine, toidukomponendi ning toidu nimetus on unikaalne, et ei tekiks failide juures üle kirjutamist. +
 
 
 import java.io.IOException;
@@ -19,12 +19,12 @@ import java.io.FileReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // loome toiduained
-        Toiduaine kartul = new Toiduaine("Kartul", 3.0, 0.15, 25.0);
+        Toiduaine kartul = new Toiduaine("leib", 3.0, 0.15, 25.0);
         Toiduaine hapukoor = new Toiduaine("Hapukoor", 2.0, 20.0, 3.0);
         Toiduaine vorst = new Toiduaine("Vorst", 25.0, 15.0, 5.0);
 
         // loome toiukomponendid
-        Toidukomponent kartulikomponent = new Toidukomponent(750,kartul, "Kartul");
+        Toidukomponent kartulikomponent = new Toidukomponent(750,kartul, "leib");
         Toidukomponent hapukoorkomponent = new Toidukomponent(275,hapukoor, "Hapukoor");
         Toidukomponent vorstikomponent = new Toidukomponent(150, vorst, "Vorst");
 
@@ -37,7 +37,7 @@ public class Main {
         System.out.println(rasv3);
 
         // loome uue toidu
-        Toit salat = new Toit("Kartulisalat");
+        Toit salat = new Toit("võileib");
         salat.lisaKomponent(kartulikomponent);
         salat.lisaKomponent(hapukoorkomponent);
         salat.lisaKomponent(vorstikomponent);
@@ -55,7 +55,7 @@ public class Main {
         double toiduKogus= salat.arvutaKogused();
         System.out.println("Salati kogus: "+toiduKogus+" grammi.");
 
-
+        // tekstifaili lisamine
         String test2= salat.tekstiPanek2();
         System.out.println(test2);
 

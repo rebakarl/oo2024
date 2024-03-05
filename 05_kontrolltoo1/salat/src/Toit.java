@@ -14,7 +14,6 @@ public class Toit {
         this.toidukomponendid = new ArrayList<>();
     }
 
-
     // listi lisamiseks/eemaldamiseks
     public void lisaKomponent(Toidukomponent toidukomponent) {
         toidukomponendid.add(toidukomponent);
@@ -57,6 +56,7 @@ public class Toit {
     //tekstifaili kirjtuamine
     public String tekstiPanek2() throws IOException {
         PrintWriter pw = new PrintWriter(new FileWriter("test2.txt"));
+        pw.println("Toit: "+this.nimetus);
         for (Toidukomponent toidukomponent : toidukomponendid){
 
             String toiduNimetus=(toidukomponent.getNimetus());

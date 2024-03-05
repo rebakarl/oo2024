@@ -1,6 +1,7 @@
-Toidukomponent nimetus: Kartul
+Toit: võileib
+Toidukomponent nimetus: leib
 Kogus: 750.0
-Toiduaine: Kartul
+Toiduaine: leib
 Aine valgud: 3.0
 Aine süsivesik: 25.0
 Aine rasv: 0.15
