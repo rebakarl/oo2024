@@ -1,0 +1,18 @@
+Toidukomponent nimetus: Kartul
+Kogus: 750.0
+Toiduaine: Kartul
+Aine valgud: 3.0
+Aine süsivesik: 25.0
+Aine rasv: 0.15
+Toidukomponent nimetus: Hapukoor
+Kogus: 275.0
+Toiduaine: Hapukoor
+Aine valgud: 2.0
+Aine süsivesik: 3.0
+Aine rasv: 20.0
+Toidukomponent nimetus: Vorst
+Kogus: 150.0
+Toiduaine: Vorst
+Aine valgud: 25.0
+Aine süsivesik: 5.0
+Aine rasv: 15.0
