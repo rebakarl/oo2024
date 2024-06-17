@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/06_liides.iml" filepath="$PROJECT_DIR$/.idea/06_liides.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kujundid/Kujundid.iml" filepath="$PROJECT_DIR$/Kujundid/Kujundid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Liides/Liides.iml" filepath="$PROJECT_DIR$/Liides/Liides.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kodutoo/kodutoo.iml" filepath="$PROJECT_DIR$/kodutoo/kodutoo.iml" />
+    </modules>
+  </component>
+</project>

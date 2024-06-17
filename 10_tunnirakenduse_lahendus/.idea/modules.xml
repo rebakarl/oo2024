@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/10_tunnirakenduse_lahendus.iml" filepath="$PROJECT_DIR$/.idea/10_tunnirakenduse_lahendus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/veebipood/veebipood.iml" filepath="$PROJECT_DIR$/veebipood/veebipood.iml" />
+    </modules>
+  </component>
+</project>
