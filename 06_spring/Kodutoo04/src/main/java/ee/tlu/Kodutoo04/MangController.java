@@ -42,7 +42,7 @@ public class MangController {
     }
 
     // muuda mängu
-    // localhost:8080/api/muudamangu?index=0&nimi=UNO&mangijateArv=4&kestus=30&punktiskoor=123
+    // localhost:8080/api/muudamangu?id=0&nimi=UNO&mangijateArv=4&kestus=30&punktiskoor=123
     @PutMapping("muudamang")
     public List<Mang> muudaMangu(
             @RequestParam int id,
