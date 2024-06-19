@@ -40,4 +40,30 @@ public class MatkajaController {
         matkajaRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
+
+    @PutMapping("/{id}/suurenda-kilomeetraazi/{lisatudKilomeetraaz}")
+    public ResponseEntity<Matkaja> suurendaKilomeetraazi(@PathVariable Long id, @PathVariable double lisatudKilomeetraaz) {
+        Optional<Matkaja> matkajaOptional = matkajaRepository.findById(id);
+        if (matkajaOptional.isPresent()) {
+            Matkaja matkaja = matkajaOptional.get();
+            double uusKilomeetraaz = matkaja.getKilomeetraaz() + lisatudKilomeetraaz;
+            matkaja.setKilomeetraaz(uusKilomeetraaz);
+            matkajaRepository.save(matkaja);
+            return ResponseEntity.ok(matkaja);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/suurima-kilomeetraaziga-matkaja")
+    public ResponseEntity<Matkaja> suurimaKilomeetraazigaMatkaja() {
+        List<Matkaja> matkajad = matkajaRepository.findAll();
+        if (matkajad.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        Matkaja suurimaKilomeetraazigaMatkaja = matkajad.stream()
+                .max(Comparator.comparingDouble(Matkaja::getKilomeetraaz))
+                .orElseThrow();
+        return ResponseEntity.ok(suurimaKilomeetraazigaMatkaja);
+    }
 }
