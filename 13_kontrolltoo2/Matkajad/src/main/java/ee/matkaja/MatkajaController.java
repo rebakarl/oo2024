@@ -40,7 +40,7 @@ public class MatkajaController {
         matkajaRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
+    // localhost:8080/5/suurenda-kilometraazi/35
     @PutMapping("/{id}/suurenda-kilomeetraazi/{lisatudKilomeetraaz}")
     public ResponseEntity<Matkaja> suurendaKilomeetraazi(@PathVariable Long id, @PathVariable double lisatudKilomeetraaz) {
         Optional<Matkaja> matkajaOptional = matkajaRepository.findById(id);

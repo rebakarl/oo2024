@@ -11,7 +11,7 @@ public class MangController {
     List<Mang> manguAndmed = new ArrayList<>();
 
     // saa mäng
-    // localhost:8080/mangu-andmed
+    // localhost:8080/api/mangu-andmed
     @GetMapping("mangu-andmed")
     public List<Mang> saaManguAndmed() {
         return manguAndmed;
@@ -34,7 +34,7 @@ public class MangController {
     }
 
     // kustuta mäng
-    // localhost:8080/api/kustutamang/0
+    // localhost:8080/api/kustutamang/1
     @DeleteMapping("kustutamang/{id}")
     public List<Mang> kustutaMang(@PathVariable int id) {
         manguAndmed.remove(id);
@@ -42,7 +42,7 @@ public class MangController {
     }
 
     // muuda mängu
-    // localhost:8080/api/muudamangu?id=0&nimi=UNO&mangijateArv=4&kestus=30&punktiskoor=123
+    // localhost:8080/api/muudamang?id=1&nimi=UNO&mangijateArv=4&kestus=30&punktiskoor=123
     @PutMapping("muudamang")
     public List<Mang> muudaMangu(
             @RequestParam int id,
